@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:background="@color/greyMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:background="@drawable/corner_radius_style"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:id="@+id/titleService"
+                android:layout_gravity="left"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/descriptionService"
+                android:layout_gravity="left"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="2.4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/priceService"
+                android:layout_marginRight="30dp"
+                android:padding="5dp"
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="price"/>
+            <com.google.android.material.button.MaterialButton
+                android:textColor="@color/beigeMain"
+                android:id="@+id/btnService"
+                android:layout_gravity="end"
+                android:paddingRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REZERWUJ"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

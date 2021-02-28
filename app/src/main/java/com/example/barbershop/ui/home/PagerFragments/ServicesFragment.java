@@ -3,12 +3,18 @@ package com.example.barbershop.ui.home.PagerFragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.barbershop.R;
+import com.example.barbershop.Service;
+import com.example.barbershop.ui.home.adapters.AdapterServices;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +67,21 @@ public class ServicesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_services, container, false);
+        View view= inflater.inflate(R.layout.fragment_services, container, false);
+        ArrayList<Service> services = new ArrayList<>();
+        services.add(new Service("COMBO","Tworzenie Ikony Stylu", "90.00 zl"));
+        services.add(new Service("HAIRCUT","Tworzenie Ikony Stylu", "60.00 zl"));
+        services.add(new Service("BEARD","Tworzenie Ikony Stylu", "40.00 zl"));
+        services.add(new Service("SPA","Parowanie, Pilling, Glinka, Platki pod oczy, Regulacja brwi ", "50.00 zl"));
+        services.add(new Service("MILITARY CUT","Strzyrzenie na jedną dlugość", "40.00 zl"));
+        services.add(new Service("Przyciemnienie Brody","", "40.00 zl"));
+
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerService);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(view.getContext(),1);
+        recyclerView.setLayoutManager(layoutManager);
+        AdapterServices adapterServices = new AdapterServices(view.getContext(), services);
+        recyclerView.setAdapter(adapterServices);
+
+        return  view;
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="blackDarkMain">#1A1A1F</color>
-    <color name="beigeMain">#D9C0A7</color>
-    <color name="greyMain">#B6BAC0</color>
+    <color name="purple_200">#9568E2</color>
+    <color name="blackDarkMain">#1D1A2B</color>
+    <color name="beigeMain">#2569FA</color>
+    <color name="greyMain">#544F6E</color>
     <color name="textMain">#F5F4F3</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
